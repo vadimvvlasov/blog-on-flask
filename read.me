@@ -1,10 +1,10 @@
  MVC:
    model - db: модель, описание данных в базе данных
    View - template: отвечает за отображение пользователю данных
-   Controller - связывает базу данных и приложение:
+   Controller - связывает базу данных и приложение (пользователя):
                   - получение запроса от пользователя
                   - обработка запроса
-                  - перенаправление на выполнение
+                  - перенаправление на выполнение (формируется страница и отдаётся пользователю)
   flask    ->  django
 Controller ->   View
    View    -> Templates
@@ -12,8 +12,12 @@ Controller ->   View
   django ->    View   = Controller -> flask
   django -> Templates =    View    -> flask
 
-1. Установка mysql
+1. Установка mysql/ password = spectr
 --> https://www.youtube.com/watch?v=3vsC05rxZ8c
 2.
 --> virtualenv venv
 --> venv\Scripts\activate.bat
+
+3. Функциональность выделяется в отдельный модуль, плагин -> Blueprint (app django)
+blueprint.py - кусок настолько изолированной функциональности, что его можно
+скопипастить в другой проект
