@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  This is title
+  {{ post.title }}
 {% endblock %}
+
 
 {% block content_title %}
-  This is Content_title
+  {{ post.title }}
 {% endblock %}
 
+
 {% block content %}
-  This is Some content
-  <br> {{ n }}
+  {{ post.body }}
 {% endblock %}
