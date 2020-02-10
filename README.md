@@ -23,8 +23,11 @@ Controller ->   View
 необходимо изменить метод аутентификации с auth_socket на mysql_native_password
 
 mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
 mysql> FLUSH PRIVILEGES;
+
 mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
 
 
